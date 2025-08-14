@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icarus Wealth - Investment Platform</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.svg" alt="Icarus Wealth Logo" class="navbar-logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Education Hub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Investment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a class="btn btn-custom btn-green">
+                        Get Started
+                        <img src="images/icons/rocket-icon.svg" alt="rocket-icon" class="btn-icon bg-white">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Simplify Your Investment Journey</h1>
+                <p class="hero-subtitle mt-3 mb-5">One platform to manage, grow, and educate your financial future.</p>
+                <a class="btn btn-custom btn-white btn-lg ">
+                    Get Started <img src="images/icons/rocket-white.svg" alt="rocket-icon" class="btn-icon bg-primary">
+                </a>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section class="dashboard-section">
+            <div class="container">
+                <div class=" cards-outer-wrapper">
+                    <div class="card-wrapper d-flex align-items-center">
+                        <div class="dashboard-card">
+                            <div class="card-title">Earnings Overview</div>
+                            <div class="d-flex justify-content-between mb-2 list-item">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <div class="icon-wrapper">
+                                        <img src="images/icons/dollor.svg" alt="Dollor">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <span class="card-subtitle">Portfolio Value</span>
+                                        <span class="card-value">₦25,989.05</span>
+                                    </div>
+                                </div>
+                                <small class="text-muted text-end lh-base">NZ$ 2,021.96</small>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2 list-item">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <div class="icon-wrapper">
+                                        <img src="images/icons/profit.svg" alt="Dollor">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <span class="card-subtitle">Total Profit</span>
+                                        <span class="card-value">NZ$ 1,982.32</span>
+                                    </div>
+                                </div>
+                                <small class="text-muted text-end lh-base">~4999.79%</small>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2 list-item">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <div class="icon-wrapper">
+                                        <img src="images/icons/stock.svg" alt="Dollor">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <span class="card-subtitle">Top performing stock</span>
+                                        <span class="card-value">Kotak Gilt inv. Regular- Growth</span>
+                                    </div>
+                                </div>
+                                <small class="text-muted text-end lh-base">INF174K01FI5</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <div class="dashboard-card p-0">
+                            <img src="images/graph.svg" alt="Graph" class="w-100 graph-img">
+                        </div>
+                        <div class="dashboard-card mt-3 d-lg-block d-none h-auto">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="stock-number">NZ$110.34</span>
+                                <a class="wallet-add-btn">Add Wallent</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fund-wrapper d-flex flex-column justify-content-center">
+                        <div class="dashboard-card h-auto">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="stock-number">NZ$110.34</span>
+                                <a class="wallet-add-btn">Add Wallent</a>
+                            </div>
+                        </div>
+                        <div class="dashboard-card mt-3">
+                            <h3 class="fund-title">My Funds</h3>
+                            <div class="fund-box-wrapper">
+                                <div class="top-box d-flex align-items-start justify-content-between p-3">
+                                    <div>
+                                        <div>
+                                            <small class="text-muted lh-base pe-1">INF174K01FI5</small>
+                                            <small class="text-muted lh-base ps-1 border-start">~4999.79%</small>
+                                        </div>
+                                        <span class="card-value d-block">Kotak Gilt inv. Regular- Growth</span>
+                                    </div>
+                                    <a class="border-btn-custom">Processed</a>
+                                </div>
+                                <div class="p-3 d-flex align-items-center justify-content-between">
+                                    <h3 class="card-value d-block text-green">NZ$ 1.86 (M)</h3>
+                                    <div class="d-flex flex-column gap-2 justify-content-between align-items-end">
+                                        <a class="wallet-add-btn">Buy</a>
+                                        <small class="text-muted text-end lh-base">21 Jul, 2025 05:45 AM</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper d-flex align-items-center">
+                        <div class="dashboard-card">
+                            <div class="card-title">Earnings Overview</div>
+                            <div class="d-flex justify-content-between mb-2 list-item">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <div class="icon-wrapper">
+                                        <img src="images/icons/dollor.svg" alt="Dollor">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <span class="card-subtitle">Portfolio Value</span>
+                                        <span class="card-value">₦25,989.05</span>
+                                    </div>
+                                </div>
+                                <small class="text-muted text-end lh-base">NZ$ 2,021.96</small>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2 list-item">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <div class="icon-wrapper">
+                                        <img src="images/icons/profit.svg" alt="Dollor">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <span class="card-subtitle">Total Profit</span>
+                                        <span class="card-value">NZ$ 1,982.32</span>
+                                    </div>
+                                </div>
+                                <small class="text-muted text-end lh-base">~4999.79%</small>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2 list-item">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <div class="icon-wrapper">
+                                        <img src="images/icons/stock.svg" alt="Dollor">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <span class="card-subtitle">Top performing stock</span>
+                                        <span class="card-value">Kotak Gilt inv. Regular- Growth</span>
+                                    </div>
+                                </div>
+                                <small class="text-muted text-end lh-base">INF174K01FI5</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="sec-title text-center">Some of Wonderful Features</h2>
+                        <p class="para text-black mx-auto col-lg-6 text-center">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </div>
+                </div>
+
+                <div class="feature-box one my-md-5 my-sm-4 my-3">
+                    <div class="row align-items-stretch justify-content-between">
+                        <div class="col-lg-5">
+                            <div class="content-wrapper">
+                                <div class="feature-icon-wrapper">
+                                    <img src="images/icons/smartphone.svg" alt="smartphone">
+                                </div>
+                                <h3 class="feature-title my-md-3 my-2 ">One Click Blance view </h3>
+                                <p class="para para-gray col-lg-8">Commonly used in the graphic, print
+                                    & publishing industris for previewing visual layout and mockups.</p>
+                                <a href="#" class="arrow-btn"><img src="images/icons/arrow-wide.svg" alt="arrow"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <img src="images/feature-one.png" alt="feature" class="h-100 w-auto img-fluid feature-img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box two my-md-5 my-sm-4 my-3">
+                    <div class="row align-items-stretch justify-content-between flex-wrap-reverse">
+                        <div class="col-lg-5 pt-lg-5">
+                            <img src="images/feature-two.png" alt="feature" class="h-100 w-auto img-fluid feature-img">
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="content-wrapper">
+                                <div class="feature-icon-wrapper">
+                                    <img src="images/icons/layers.svg" alt="smartphone">
+                                </div>
+                                <h3 class="feature-title my-md-3 my-2 ">Expense with Our Limiter</h3>
+                                <p class="para para-gray col-lg-8">Commonly used in the graphic, print
+                                    & publishing industris for previewing visual layout and mockups.</p>
+                                <a href="#" class="arrow-btn"><img src="images/icons/arrow-wide.svg" alt="arrow"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box one my-md-5 my-sm-4 my-3 pe-lg-0">
+                    <div class="row align-items-stretch justify-content-between">
+                        <div class="col-lg-5">
+                            <div class="content-wrapper">
+                                <div class="feature-icon-wrapper">
+                                    <img src="images/icons/star.svg" alt="star">
+                                </div>
+                                <h3 class="feature-title my-md-3 my-2 ">Custome & Plugin Development. </h3>
+                                <p class="para para-gray col-lg-8">Commonly used in the graphic, print
+                                    & publishing industris for previewing visual layout and mockups.</p>
+                                <a href="#" class="arrow-btn"><img src="images/icons/arrow-wide.svg" alt="arrow"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <img src="images/feature-three.png" alt="feature"
+                                class="h-100 w-auto img-fluid feature-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h2 class="sec-title text-center">Frequently Asked Question</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="faq-container">
+                            <div class="accordion" id="faqAccordion">
+                                <!-- FAQ Item 1 - Default Open -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                            What is the purpose of this service?
+                                            <svg class="check-icon" width="28" height="28" viewBox="0 0 28 28"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1894_11720)">
+                                                    <path
+                                                        d="M0 14C0 21.7199 6.28015 28 14 28C21.7199 28 28 21.7199 28 14C28 6.28015 21.7199 0 14 0C6.28015 0 0 6.28015 0 14ZM14.8249 9.67515L20.6581 15.5085C20.7666 15.6167 20.8527 15.7453 20.9113 15.8868C20.97 16.0284 21.0001 16.1801 21 16.3334C21.0001 16.4866 20.97 16.6383 20.9113 16.7799C20.8527 16.9214 20.7666 17.05 20.6581 17.1582C20.202 17.6144 19.4646 17.6144 19.0085 17.1582L14 12.1496L8.9915 17.1581C8.53535 17.6143 7.798 17.6143 7.34185 17.1581C6.8857 16.702 6.8857 15.9646 7.34185 15.5085L13.1752 9.67515C13.6314 9.219 14.3686 9.219 14.8249 9.67515Z"
+                                                        fill="#040404" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1894_11720">
+                                                        <rect width="28" height="28" fill="white"
+                                                            transform="matrix(0 -1 1 0 0 28)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="faq1" class="accordion-collapse collapse show"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            The purpose of this service is to provide users with a seamless,
+                                            user-friendly experience that simplifies their daily needs while offering
+                                            value, convenience, and reliability.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false"
+                                            aria-controls="faq2">
+                                            How do I sign up or register?
+                                            <svg class="check-icon" width="28" height="28" viewBox="0 0 28 28"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1894_11720)">
+                                                    <path
+                                                        d="M0 14C0 21.7199 6.28015 28 14 28C21.7199 28 28 21.7199 28 14C28 6.28015 21.7199 0 14 0C6.28015 0 0 6.28015 0 14ZM14.8249 9.67515L20.6581 15.5085C20.7666 15.6167 20.8527 15.7453 20.9113 15.8868C20.97 16.0284 21.0001 16.1801 21 16.3334C21.0001 16.4866 20.97 16.6383 20.9113 16.7799C20.8527 16.9214 20.7666 17.05 20.6581 17.1582C20.202 17.6144 19.4646 17.6144 19.0085 17.1582L14 12.1496L8.9915 17.1581C8.53535 17.6143 7.798 17.6143 7.34185 17.1581C6.8857 16.702 6.8857 15.9646 7.34185 15.5085L13.1752 9.67515C13.6314 9.219 14.3686 9.219 14.8249 9.67515Z"
+                                                        fill="#040404" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1894_11720">
+                                                        <rect width="28" height="28" fill="white"
+                                                            transform="matrix(0 -1 1 0 0 28)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Registration details will appear here when expanded.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false"
+                                            aria-controls="faq3">
+                                            Is this service free or paid?
+                                            <svg class="check-icon" width="28" height="28" viewBox="0 0 28 28"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1894_11720)">
+                                                    <path
+                                                        d="M0 14C0 21.7199 6.28015 28 14 28C21.7199 28 28 21.7199 28 14C28 6.28015 21.7199 0 14 0C6.28015 0 0 6.28015 0 14ZM14.8249 9.67515L20.6581 15.5085C20.7666 15.6167 20.8527 15.7453 20.9113 15.8868C20.97 16.0284 21.0001 16.1801 21 16.3334C21.0001 16.4866 20.97 16.6383 20.9113 16.7799C20.8527 16.9214 20.7666 17.05 20.6581 17.1582C20.202 17.6144 19.4646 17.6144 19.0085 17.1582L14 12.1496L8.9915 17.1581C8.53535 17.6143 7.798 17.6143 7.34185 17.1581C6.8857 16.702 6.8857 15.9646 7.34185 15.5085L13.1752 9.67515C13.6314 9.219 14.3686 9.219 14.8249 9.67515Z"
+                                                        fill="#040404" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1894_11720">
+                                                        <rect width="28" height="28" fill="white"
+                                                            transform="matrix(0 -1 1 0 0 28)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Pricing information will appear here when expanded.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 4 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false"
+                                            aria-controls="faq4">
+                                            Can I cancel my subscription anytime?
+                                            <svg class="check-icon" width="28" height="28" viewBox="0 0 28 28"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1894_11720)">
+                                                    <path
+                                                        d="M0 14C0 21.7199 6.28015 28 14 28C21.7199 28 28 21.7199 28 14C28 6.28015 21.7199 0 14 0C6.28015 0 0 6.28015 0 14ZM14.8249 9.67515L20.6581 15.5085C20.7666 15.6167 20.8527 15.7453 20.9113 15.8868C20.97 16.0284 21.0001 16.1801 21 16.3334C21.0001 16.4866 20.97 16.6383 20.9113 16.7799C20.8527 16.9214 20.7666 17.05 20.6581 17.1582C20.202 17.6144 19.4646 17.6144 19.0085 17.1582L14 12.1496L8.9915 17.1581C8.53535 17.6143 7.798 17.6143 7.34185 17.1581C6.8857 16.702 6.8857 15.9646 7.34185 15.5085L13.1752 9.67515C13.6314 9.219 14.3686 9.219 14.8249 9.67515Z"
+                                                        fill="#040404" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1894_11720">
+                                                        <rect width="28" height="28" fill="white"
+                                                            transform="matrix(0 -1 1 0 0 28)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Cancellation policy details will appear here when expanded.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 5 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false"
+                                            aria-controls="faq5">
+                                            What platforms is this available on?
+                                            <svg class="check-icon" width="28" height="28" viewBox="0 0 28 28"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1894_11720)">
+                                                    <path
+                                                        d="M0 14C0 21.7199 6.28015 28 14 28C21.7199 28 28 21.7199 28 14C28 6.28015 21.7199 0 14 0C6.28015 0 0 6.28015 0 14ZM14.8249 9.67515L20.6581 15.5085C20.7666 15.6167 20.8527 15.7453 20.9113 15.8868C20.97 16.0284 21.0001 16.1801 21 16.3334C21.0001 16.4866 20.97 16.6383 20.9113 16.7799C20.8527 16.9214 20.7666 17.05 20.6581 17.1582C20.202 17.6144 19.4646 17.6144 19.0085 17.1582L14 12.1496L8.9915 17.1581C8.53535 17.6143 7.798 17.6143 7.34185 17.1581C6.8857 16.702 6.8857 15.9646 7.34185 15.5085L13.1752 9.67515C13.6314 9.219 14.3686 9.219 14.8249 9.67515Z"
+                                                        fill="#040404" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1894_11720">
+                                                        <rect width="28" height="28" fill="white"
+                                                            transform="matrix(0 -1 1 0 0 28)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Platform availability information will appear here when expanded.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 6 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false"
+                                            aria-controls="faq6">
+                                            How do I contact support?
+                                            <svg class="check-icon" width="28" height="28" viewBox="0 0 28 28"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1894_11720)">
+                                                    <path
+                                                        d="M0 14C0 21.7199 6.28015 28 14 28C21.7199 28 28 21.7199 28 14C28 6.28015 21.7199 0 14 0C6.28015 0 0 6.28015 0 14ZM14.8249 9.67515L20.6581 15.5085C20.7666 15.6167 20.8527 15.7453 20.9113 15.8868C20.97 16.0284 21.0001 16.1801 21 16.3334C21.0001 16.4866 20.97 16.6383 20.9113 16.7799C20.8527 16.9214 20.7666 17.05 20.6581 17.1582C20.202 17.6144 19.4646 17.6144 19.0085 17.1582L14 12.1496L8.9915 17.1581C8.53535 17.6143 7.798 17.6143 7.34185 17.1581C6.8857 16.702 6.8857 15.9646 7.34185 15.5085L13.1752 9.67515C13.6314 9.219 14.3686 9.219 14.8249 9.67515Z"
+                                                        fill="#040404" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1894_11720">
+                                                        <rect width="28" height="28" fill="white"
+                                                            transform="matrix(0 -1 1 0 0 28)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Support contact information will appear here when expanded.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="row flex-wrap-reverse align-items-center">
+                            <div class="col-lg-6 pt-lg-5 pt-4">
+                                <img src="images/cta-image.png" alt="CTA image" class="w-100 img-fluid">
+                            </div>
+                            <div class="col-lg-6 d-flex flex-column justify-content-center cta-content-wrapper">
+                                <h2 class="sec-title text-white">Smarter Way to Grow Your Wealth</h2>
+                                <p class="para text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <a href="#">
+                                        <img src="images/google-play.png" alt="Google play" class="play-img">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/apple.png" alt="Apple store" class="play-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 my-md-0 my-sm-4 my-3">
+                    <img src="images/footer-logo.png" alt="logo" class="f-logo">
+                    <p class="f-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna.</p>
+                    <ul class="d-flex gap-2 list-unstyled">
+                        <li><a href="#" class="f-icon bg-white"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="f-icon bg-white"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" class="f-icon bg-white"><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12 my-md-0 my-sm-4 my-3">
+                    <h5 class="f-title">Link</h5>
+                    <ul class="list-unstyled f-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Education Hub</a></li>
+                        <li><a href="#">Investment</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 my-md-0 my-sm-4 my-3">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5 class="f-title">Learn</h5>
+                            <ul class="list-unstyled f-links">
+                                <li><a href="#">Education Hub</a></li>
+                                <li><a href="#">About us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5 class="f-title">Supprot</h5>
+                            <ul class="list-unstyled f-links">
+
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 my-md-0 my-sm-4 my-3">
+                    <h5 class="f-title">Connect</h5>
+                    <ul class="list-unstyled f-links">
+                        <li><a href="#" class="d-flex align-items-center"><i class="fa-solid fa-phone"></i>+91 0000 000 000</a></li>
+                        <li><a href="#" class="d-flex align-items-center"><i class="fa-solid fa-envelope"></i>Johndeo123@gmail.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-location-dot"></i>234 Willow Street, Apt. 56B, Greenwood District, San Francisco, CA 94107, United States</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="f-bottom">© 2025 ICARUS Wealth. All Rights Reserved.</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
