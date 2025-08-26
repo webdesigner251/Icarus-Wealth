@@ -21,7 +21,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-custom">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="images/logo.svg" alt="Icarus Wealth Logo" class="navbar-logo">
                 </a>
 
@@ -48,7 +48,8 @@
                         </li>
                     </ul>
                     <div class="d-flex justify-content-center align-items-center">
-                        <a href="contact.html" class="btn btn-custom btn-white mx-lg-0 mx-auto">
+                        <a href="https://account.icaruswealth.co.nz/login" target="_blank"
+                            class="btn btn-custom btn-white mx-lg-0 mx-auto">
                             Get Started
                             <img src="images/icons/rocket-white.svg" alt="rocket-icon" class="btn-icon bg-primary">
                         </a>
@@ -87,21 +88,30 @@
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" id="name" class="form-control" placeholder="John deo">
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="Email"
-                                    class="input-data">
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Email"
+                                        class="input-data">
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="phone" class="form-label">Phone No</label>
+                                    <input type="tel" id="phone" class="form-control" placeholder="123 456 7890"
+                                        pattern="[0-9+ ]+" maxlength="15" required>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message</label>
                                 <textarea id="message" class="form-control mb-4" rows="4"
                                     placeholder="Message"></textarea>
                             </div>
-                            <a href="contact.html" class="btn btn-custom btn-gradient">
-                                Get Started
-                                <img src="images/icons/rocket-gradient.svg" alt="rocket-icon"
-                                    class="btn-icon bg-white ">
-                            </a>
+
+
+                            <button type="submit" class="btn btn-custom btn-gradient">
+                                Submit
+                                <img src="images/icons/rocket-gradient.svg" alt="rocket-icon" class="btn-icon bg-white">
+                            </button>
+
                         </form>
                     </div>
                     <div class="col-md-6 d-flex justify-content-center py-5 py-md-0">
@@ -121,13 +131,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12 my-md-0 my-sm-4 my-3">
-                    <img src="images/footer-logo.png" alt="logo" class="f-logo">
+                    <a href="index.html"><img src="images/footer-logo.png" alt="logo" class="f-logo"></a>
                     <p class="f-para">ICARUS Wealth empowers individuals with smart investment solutions and financial
                         education, helping you build a secure and sustainable future.</p>
                     <ul class="d-flex gap-3 list-unstyled">
                         <li><a href="#" class="f-icon bg-white"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="#" class="f-icon bg-white"><i class="fa-brands fa-instagram"></i></a></li>
                         <li><a href="#" class="f-icon bg-white"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" class="f-icon bg-white"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" class="f-icon bg-white"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6 col-12 my-md-0 my-sm-4 my-3">
