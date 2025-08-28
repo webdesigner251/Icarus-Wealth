@@ -5,6 +5,19 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent layout shifts during page transitions */
+.navbar-custom,
+.navbar-nav,
+.nav-link {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
 :root {
     --primary-color: #14213D;
     --secondary-color: #28A745;
@@ -17,6 +30,7 @@ body {
     /* background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1a365d 100%); */
     /* min-height: 100vh; */
     color: white;
+    padding-top: 100px;
 }
 
 .bg-primary {
@@ -41,32 +55,59 @@ a {
 
 .navbar-custom {
     background: var(--primary-color);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
     z-index: 9999;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-logo {
     width: 100%;
     height: 100px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav {
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item {
+    transition: all 0.3s ease;
 }
 
 .navbar-nav .nav-link {
     color: var(--nav-text);
-    padding: 12px 22px !important;
+    padding: 8px 22px !important;
     font-weight: 500;
     font-size: 16px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    will-change: color, background-color, transform;
+    height: auto;
+    line-height: 1.5;
 }
 
 .navbar-nav .nav-link:hover {
     color: white !important;
+    transform: translateY(-1px);
 }
 
 .navbar-nav .nav-link.active {
     color: white !important;
     background: var(--secondary-color);
     border-radius: 0.5rem;
+    transform: translateY(0);
 }
 
 .btn-custom {
@@ -75,11 +116,13 @@ a {
     padding: 9px 16px;
     font-size: 16px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: white;
     display: inline-flex;
     align-items: center;
     gap: 19px;
+    will-change: transform, background-color, color;
+    backface-visibility: hidden;
 }
 
 .btn-custom:hover {
@@ -1135,6 +1178,14 @@ border-radius: 8px; */
     .navbar-nav .nav-link {
         text-align: center;
     }
+    
+    body {
+        padding-top: 80px;
+    }
+    
+    .navbar-logo {
+        height: 80px;
+    }
 
     .cards-outer-wrapper {
         flex-wrap: wrap;
@@ -1200,6 +1251,14 @@ border-radius: 8px; */
 
 
 @media (max-width: 767.98px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .navbar-logo {
+        height: 70px;
+    }
+    
     .hero-section {
         padding: 50px 0px 200px 0px;
     }
@@ -1257,6 +1316,13 @@ border-radius: 8px; */
 }
 
 @media (max-width: 575.98px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .navbar-logo {
+        height: 60px;
+    }
 
     .chart-wrapper,
     .fund-wrapper,

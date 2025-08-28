@@ -14,6 +14,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .form-control::placeholder {
+            font-size: 14px;
+        }
+        #phoneHelp {
+            font-size: 12px !important;
+        }
+        .phone-tooltip {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .phone-tooltip::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 20px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #333;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,7 +80,7 @@
                     <div class="d-flex justify-content-center align-items-center">
                         <a href="https://account.icaruswealth.co.nz/login" target="_blank"
                             class="btn btn-custom btn-white mx-lg-0 mx-auto">
-                            Get Started
+                            Login/Sign up
                             <img src="images/icons/rocket-white.svg" alt="rocket-icon" class="btn-icon bg-primary">
                         </a>
                     </div>
@@ -83,31 +113,35 @@
                     <div class="col-md-6 ">
                         <p class="abt-txt-1 pb-4 text-md-start">Get in touch</p>
 
-                        <form class=" ">
+                        <form id="contactForm">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" id="name" class="form-control" placeholder="John deo">
+                                <input type="text" id="name" class="form-control" placeholder="John deo" required>
                             </div>
                             <div class="row">
                                 <div class="col-6 mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" id="email" class="form-control" placeholder="Email"
-                                        class="input-data">
+                                    <input type="email" id="email" class="form-control" placeholder="Email" required>
                                 </div>
-                                <div class="col-6 mb-3">
+                                <div class="col-6 mb-3" style="position: relative;">
                                     <label for="phone" class="form-label">Phone No</label>
-                                    <input type="tel" id="phone" class="form-control" placeholder="123 456 7890"
-                                        pattern="[0-9+ ]+" maxlength="15" required>
+                                    <input type="tel" id="phone" class="form-control" placeholder="02xxxxxxxx"
+                                        pattern="02[0-9]{8}" maxlength="10" required
+                                        title="Phone number must start with 02 and be 10 digits total">
+                                    <div id="phoneTooltip" class="phone-tooltip" style="display: none;">
+                                        Phone number must start with 02 and be 10 digits total
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message</label>
                                 <textarea id="message" class="form-control mb-4" rows="4"
-                                    placeholder="Message"></textarea>
+                                    placeholder="Message" required></textarea>
                             </div>
 
+                            <div id="statusMessage" class="mb-3" style="display: none;"></div>
 
-                            <button type="submit" class="btn btn-custom btn-gradient">
+                            <button type="submit" class="btn btn-custom btn-gradient" id="submitBtn">
                                 Submit
                                 <img src="images/icons/rocket-gradient.svg" alt="rocket-icon" class="btn-icon bg-white">
                             </button>
@@ -191,6 +225,94 @@
     <div class="f-bottom">© 2025 ICARUS Wealth. All Rights Reserved.</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Phone input validation
+        document.getElementById('phone').addEventListener('focus', function() {
+            if (this.value === '') {
+                document.getElementById('phoneTooltip').style.display = 'block';
+            }
+        });
+        
+        document.getElementById('phone').addEventListener('input', function() {
+            document.getElementById('phoneTooltip').style.display = 'none';
+        });
+        
+        document.getElementById('phone').addEventListener('blur', function() {
+            document.getElementById('phoneTooltip').style.display = 'none';
+        });
+        
+        // Set custom validation message
+        document.getElementById('phone').addEventListener('invalid', function() {
+            this.setCustomValidity('Phone number must start with 02 and be 10 digits total');
+        });
+        
+        document.getElementById('phone').addEventListener('input', function() {
+            this.setCustomValidity('');
+            document.getElementById('phoneTooltip').style.display = 'none';
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const statusMessage = document.getElementById('statusMessage');
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                statusMessage.innerHTML = '<div class="alert alert-danger">Please enter a valid email address.</div>';
+                statusMessage.style.display = 'block';
+                return;
+            }
+            
+            // Validate phone number
+            const phoneRegex = /^02[0-9]{8}$/;
+            if (!phoneRegex.test(formData.phone)) {
+                statusMessage.innerHTML = '<div class="alert alert-danger">Phone number must start with 02 and be 10 digits total</div>';
+                statusMessage.style.display = 'block';
+                return;
+            }
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Submitting...';
+            
+            try {
+                const response = await fetch('http://localhost:5000/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    statusMessage.innerHTML = '<div class="alert alert-success">Thank you! Your message has been sent successfully.</div>';
+                    statusMessage.style.display = 'block';
+                    document.getElementById('contactForm').reset();
+                } else {
+                    throw new Error('Failed to send message');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                statusMessage.innerHTML = '<div class="alert alert-danger">Sorry, there was an error sending your message. Please try again.</div>';
+                statusMessage.style.display = 'block';
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submit <img src="images/icons/rocket-gradient.svg" alt="rocket-icon" class="btn-icon bg-white">';
+            }
+        });
+    </script>
+    <script src="js/social-links.js"></script>
 </body>
 
 </html>
